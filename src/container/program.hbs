@@ -7,7 +7,7 @@
 
           <p><strong>{{location.city}},
               {{location.country}}</strong></p>
-          <p><time>{{date}}</time></p>
+          <p>Tour date: <time>{{date}}</time></p>
         </section>
         <hr />
         <section>
@@ -31,8 +31,11 @@
                         {{country}}.</div>
                     {{/with}}
 
+                    <div>Exhibits: </div>
+                    <br />
                     {{#each exhibits}}
-                      <div>Exhibit: {{name}}.</div>
+
+                      <div>{{name}}.</div>
                       <ul>
                         {{#if artist}}<li>Artist :{{artist}}
                           </li>{{/if}}
@@ -57,7 +60,7 @@
                     {{/with}}
                   {{/with}}
 
-                  <div>Performers:</div>
+                  {{#if venue}}<div>Performers:</div>{{/if}}
                   {{#each performers}}
                     <ul>
                       <li>{{name}} - {{type}}.</li>
@@ -71,7 +74,6 @@
                       {{rating}})</div>
                   {{/with}}
                 </section>
-                <hr />
               {{/with}}
             </ul>
           {{/each}}
