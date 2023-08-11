@@ -1,0 +1,76 @@
+<div>
+  <main>
+    <div><h1>{{name}}</h1></div>
+    <br />
+    <hr />
+
+    <div><h2>Users</h2></div>
+    {{#each users}}
+      <section>
+        <ul>
+          <div>{{name}}</div>
+
+          <li>ID - {{id}}</li>
+          <li>Gender- {{gender}}</li>
+          <li>Age - {{age}}</li>
+          <br />
+          <section>
+            <div><h4>Friends :</h4></div>
+            {{#each friends}}
+              <ul>
+                <div>{{name}}</div>
+
+                <li>ID - {{id}}</li>
+                <li>Gender - {{gender}}</li>
+                <li>Age - {{age}}</li>
+                <br />
+                <div><b>Mutual friends :</b></div>
+
+                {{#each mutual_friends}}
+                  <ul>
+                    <div>{{name}}</div>
+
+                    <li>ID - {{id}}</li>
+                    <li>Gender - {{gender}}</li>
+                    <li>Age - {{age}}</li>
+                    <br />
+                  </ul>
+                {{/each}}
+              </ul>
+            {{/each}}
+          </section>
+          <section>
+            {{#if groups}}<div><h4>Groups :</h4></div>{{/if}}
+
+            {{#each groups}}
+              <ul>
+                <br />
+                <div><h5>{{name}}</h5></div>
+
+                <li>ID - {{id}}</li>
+                <li>{{description}}</li>
+                <br />
+                <div><b>Members :</b></div>
+                {{#each members}}
+                  <ul>
+                    <div>{{name}}</div>
+
+                    <li>ID - {{id}}</li>
+                    <li>Gender - {{gender}}</li>
+                    <li>Age - {{age}}</li>
+                    <br />
+                  </ul>
+                {{/each}}
+              </ul>
+            {{/each}}
+          </section>
+        </ul>
+      </section>
+    {{/each}}
+  </main>
+</div>
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
