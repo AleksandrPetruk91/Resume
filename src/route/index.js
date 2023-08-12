@@ -750,7 +750,7 @@ router.get('/task21', function (req, res) {
       title: 'HTML',
       children_display: {
         title: 'Outdated HTML tags',
-        text: 'tags that have been identified as deprecated and not recommended for use in HTML version 5',
+        text: 'Tags that have been identified as deprecated and not recommended for use in HTML version 5',
         button: {
           text: 'Орen',
         },
