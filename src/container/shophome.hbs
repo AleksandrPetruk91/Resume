@@ -1,3 +1,13 @@
 <main>
-
+  <section>
+    {{#with navigation}}
+      <div class='card'>
+        <div class='nav'>
+          {{#each links}}
+            <a href='{{href}}' class='nav-link'>{{text}}</a>
+          {{/each}}
+        </div>
+      </div>
+    {{/with}}
+  </section>
 </main>
