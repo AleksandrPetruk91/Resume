@@ -1,4 +1,4 @@
-<main>
+<main class="m-5">
   <h1 class='text-center'>Hello world</h1>
   <h1 class='text-end'>Hello world</h1>
   <h2>Hello </h2>
@@ -204,7 +204,7 @@
 <hr />
 <hr />
 <hr />
-<section>
+<section class="m-5">
   <div><h1>Nav навігаційне меню</h1></div>
 
   <div class='row g-4'>
@@ -262,7 +262,7 @@
 <hr />
 <hr />
 <hr />
-<section>
+<section class="m-5">
 
   <div class='row'>
     <div class='col-6'>
@@ -336,5 +336,109 @@
     <button class='btn btn-outline-danger ps-4'>Add some
       things</button>
   </div>
+</section>
+<hr/>
+<section >
+  <div class="row m-3 my-5">
+    <div class="col-12 m-3">
+      <label class="form-label">Email address</label>
+      <input class="form-control">
+      <div class="form-text text-danger">Error. You need to enter correct email</div>
+    </div>
+    <div class="col-12 m-3">
+      <label class="form-label">Email address</label>
+      <input disabled class="form-control">
+      <div class="form-text text-danger">Error. You need to enter correct email</div>
+    </div>
+    <div class="col-12 m-3">
+      <label class="form-label">Email address</label>
+      <div class="row">
+        <div class="col-4">
+          <input type="color" class="form-control">
+        </div>
+      </div>
+      <div class="form-text text-danger">Error. You need to enter correct email</div>
+    </div>
+  </div>
+  <div class="col-12 m-4">
+    <div class="row">
+      <div class="col-2 ms-2  ">
+        <label class="form-label">Email address</label>
+      </div>
+       <div class="col-4 ">
+        <input  class="form-control">
+      </div>
+      <div class="col-5 ">
+        <div class="form-text text-danger">Error. You need to enter correct email</div>
+      </div>
+    </div>
+  </div>
+    <div class="col-12 m-3">
+      <label class="form-label">Email address</label>
+      <div class="row">
+        <div class="col-4">
+          <input class="form-control form-control-lg">
+        </div>
+        <div class="col-4">
+          <input class="form-control form-control-sm">
+        </div>
+      </div>
+      <div class="form-text text-danger">Error. You need to enter correct email</div>
+    </div>
 
+
+<hr/>
+
+<div>
+  <div class="col-12 m-3 my-5">
+    <label class="form-label">Select role</label>
+    <select class="form-select m-5">
+      <option selected>Open list</option>
+      <option id="1">Admin</option>
+      <option id="2">User</option>
+    </select>
+    <select class="form-select form-select-lg m-5">
+      <option selected>Open list</option>
+      <option id="1">Admin</option>
+      <option id="2">User</option>
+    </select>
+    <select class="form-select form-select-sm m-5">
+      <option selected>Open list</option>
+      <option id="1">Admin</option>
+      <option id="2">User</option>
+    </select>
+  </div>
+</div>
+
+  <div class="m-5"><h1>Checkbox</h1></div>
+    <div class="col-12 m-5">
+      <label class="form-label">Select food</label>
+    
+      <div class="form-check ">
+        <label class="form-check-label">Apple</label>
+        <input type="checkbox" class="form-check-input">
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">Apple</label>
+        <input type="checkbox" class="form-check-input">
+      </div>
+    </div>
+    <hr/>
+    <div class="col-12 m-5">
+      <label class="form-label">Select food</label>
+    
+      <div class="form-check form-switch">
+        <label class="form-check-label">Apple</label>
+        <input name="food" type="checkbox" class="form-check-input">
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">Apple</label>
+        <input name="food" type="radio" class="form-check-input">
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">Apple</label>
+        <input name="food" type="radio" class="form-check-input">
+      </div>
+    </div>
+  </div>
 </section>
