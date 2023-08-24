@@ -1,4 +1,5 @@
 <main class='m-4'>
+  
   {{! Варіант з IF }}
   {{#with navigation}}
     <section class='card my-5'>
@@ -96,7 +97,7 @@
     </ol>
   </section>
 
-{{!-- Form-select --}}
+  {{!-- Form-select --}}
   <section>
     <div><h1>{{header}}</h1></div>
     <div class='row my-2'>
@@ -113,17 +114,18 @@
     </div>
   </section>
 
-  {{!-- Form checkbox --}}
-  {{#each list}}
-  <label class='form-label'>{{title}}</label>
-    <div class='form-check'>
-      <label class='form-check-label'>
-        {{value}}
-      </label>
-      <input
-        type='checkbox'
-        class='form-check-input'
-      />
-    </div>
-  {{/each}}
+    {{!-- Form checkbox --}}
+    <section>
+      <label class='form-label'>{{title}}</label>
+      <div class='form-check'>
+        <label class='form-check-label'>
+          {{value}}
+        </label>
+        <input
+          type='checkbox'
+          class='form-check-input'
+        />
+      </div>
+    </section>
+
 </main>
