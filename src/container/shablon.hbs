@@ -79,4 +79,51 @@
     {{/each}}
   </section>
 
+  {{!-- Breadcrumb з одним неактивним --}}
+    <section class='row my-3'>
+    <ol class='breadcrumb'>
+      {{#each breadcrumb}}
+        {{#if url}}
+          <li class='breadcrumb-item'>
+            <a href='{{url}}'>{{name}}</a>
+          </li>
+        {{else}}
+          <li class='breadcrumb-item'>
+            <a>{{name}}</a>
+          </li>
+        {{/if}}
+      {{/each}}
+    </ol>
+  </section>
+
+{{!-- Form-select --}}
+  <section>
+    <div><h1>{{header}}</h1></div>
+    <div class='row my-2'>
+      {{#each sortBlock}}
+        <div class='col-3'>
+          <select class='form-select my-3'>
+            <option selected>{{placeholder}}</option>
+            {{#each options}}
+              <option value='{{value}}'>{{text}}</option>
+            {{/each}}
+          </select>
+        </div>
+      {{/each}}
+    </div>
+  </section>
+
+  {{!-- Form checkbox --}}
+  {{#each list}}
+  <label class='form-label'>{{title}}</label>
+    <div class='form-check'>
+      <label class='form-check-label'>
+        {{value}}
+      </label>
+      <input
+        type='checkbox'
+        class='form-check-input'
+      />
+    </div>
+  {{/each}}
 </main>
