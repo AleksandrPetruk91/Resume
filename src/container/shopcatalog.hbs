@@ -1,0 +1,182 @@
+<main class='m-4'>
+
+  {{#with navigation}}
+    <section class='card my-3'>
+      <div class='nav'>
+        {{#each links}}
+          <div class='nav-item'>
+            <a href='{{href}}' class='nav-link'>
+              {{text}}
+            </a>
+          </div>
+        {{/each}}
+        <div>
+          <a href='{{href}}' class='nav-link disabled'>
+            Disabled
+          </a>
+        </div>
+      </div>
+    </section>
+  {{/with}}
+
+  <section class='row ms-2 my-4'>
+    <ol class='breadcrumb'>
+      {{#each breadcrumb}}
+        {{#if url}}
+          <li class='breadcrumb-item'>
+            <a href='{{url}}'>{{name}}</a>
+          </li>
+        {{else}}
+          <li class='breadcrumb-item'>
+            <a>{{name}}</a>
+          </li>
+        {{/if}}
+      {{/each}}
+    </ol>
+  </section>
+
+  <section>
+    <div><h1>{{header}}</h1></div>
+    <div class='row my-2'>
+      {{#each sortBlock}}
+        <div class='col-3'>
+          <select class='form-select my-3'>
+            <option selected>{{placeholder}}</option>
+            {{#each options}}
+              <option value='{{value}}'>{{text}}</option>
+            {{/each}}
+          </select>
+        </div>
+      {{/each}}
+    </div>
+  </section>
+
+  <section class='row my-3'>
+    <div class='col-4'>
+      {{#with filterBlock}}
+        <div class='card'>
+          <div class='card-body'>
+            {{#with sellers}}
+              <label class='form-label'>{{title}}</label>
+              {{#each list}}
+                <div class='form-check'>
+                  <label class='form-check-label'>
+                    {{value}}
+                  </label>
+                  <input
+                    type='checkbox'
+                    class='form-check-input'
+                  />
+                </div>
+              {{/each}}
+            {{/with}}
+            <hr />
+            {{#with brands}}
+              <div class='my-3'>
+                <label class='form-label'>{{title}}</label>
+                <input
+                  class='form-control'
+                  placeholder='{{input.placeholder}}'
+                />
+              </div>
+
+              {{#each options}}
+                <div class='form-check'>
+                  <label class='form-check-label'>
+                    {{value}}
+                  </label>
+                  <input
+                    type='checkbox'
+                    class='form-check-input'
+                  />
+                </div>
+              {{/each}}
+            {{/with}}
+            <hr />
+            {{#with price}}
+              <div class='my-3'>
+                <label class='form-label'>{{title}}</label>
+                {{#with range}}
+                  <input
+                    class='form-control my-2'
+                    placeholder='{{from}}'
+                  />
+                  <input
+                    class='form-control'
+                    placeholder='{{to}}'
+                  />
+                {{/with}}
+              </div>
+              {{#with button}}
+                <a
+                  href='{{link}}'
+                  class='btn btn-outline-secondary'
+                >
+                  {{text}}
+                </a>
+              {{/with}}
+            {{/with}}
+
+            {{#each filterList}}
+              <hr />
+              <label class='form-label'>{{title}}</label>
+              {{#each options}}
+                <div class='form-check'>
+                  <label class='form-check-label'>
+                    {{value}}
+                  </label>
+                  <input
+                    type='checkbox'
+                    class='form-check-input'
+                  />
+                </div>
+              {{/each}}
+            {{/each}}
+          </div>
+        </div>
+      {{/with}}
+    </div>
+
+    <div class='col-8'>
+      <div class='row'>
+        {{> catalogItem}}
+      </div>
+
+    </div>
+  </section>
+
+  {{#with service}}
+    <div class='card text-bg-success my-5'>
+      <div class='card-body text-center'>
+        <div><h2>{{title}}</h2></div>
+        <p>{{description}}</p>
+
+        {{#each buttons}}
+          <a
+            href='{{link}}'
+            target='_blanc'
+            class='btn btn-primary my-2'
+          >
+            {{text}}
+          </a>
+        {{/each}}
+      </div>
+    </div>
+    <hr />
+  {{/with}}
+
+  <section class='nav my-4'>
+    {{#each footer}}
+      <div class='nav-item'>
+        <a href='{{0.link}}' class='nav-link'>{{0.text}}</a>
+        <a href='{{1.link}}' class='nav-link'>{{1.text}}</a>
+        <a href='{{2.link}}' class='nav-link'>{{2.text}}</a>
+        <a
+          href='{{3.link}}'
+          class='nav-link disabled'
+        >{{3.text}}</a>
+      </div>
+    {{/each}}
+  </section>
+
+</main>
