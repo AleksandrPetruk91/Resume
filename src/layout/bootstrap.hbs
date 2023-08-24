@@ -12,6 +12,7 @@
     <meta charset='utf-8' />
     <link href='css/index.css' rel='stylesheet' />
 
+    {{!  ↓  підключаємо  bootstrap   }}
     <link
       href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css'
       rel='stylesheet'
@@ -29,12 +30,18 @@
       crossorigin='anonymous'
     ></script>
 
+    {{!  ↓  підключаємо  css   }}
+    <link href='css/style.css' rel='stylesheet' />
+    <style>
+      h1{ background: rosybrown; color:brown; }
+    </style>
   </head>
 
   <body>
     {{!  ↓  ця кострукція показує куди шаблонізатору треба вставляти код з container файлу   }}
     {{{body}}}
 
+    {{!  ↓  підключаємо  bootstrap   }}
     <script
       src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js'
     > </script>
