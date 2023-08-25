@@ -1,4 +1,4 @@
-<main>
+<main class='m-4'>
   <section class='row'>
     {{#with navigation}}
       <div class='col-6'>
@@ -218,9 +218,9 @@
         {{/each}}
       </div>
 
-      <div class='col-3 gx-5'>
+      <div class='col-4 gx-5'>
         {{#each socialMedia}}
-          <div class='row g-5'>
+          <div class='row my-3'>
             <a
               href='{{link}}'
               class='btn btn-outline-dark'
@@ -233,15 +233,17 @@
         {{/each}}
       </div>
 
-      <div class='col-5'>
+      <div class='col-4'>
         {{#each partners}}
-          <a
-            href='{{link}}'
-            class='btn btn-outline-info'
-            target='_blanc'
-          >
-            {{name}}
-          </a>
+          <div class='row my-3'>
+            <a
+              href='{{link}}'
+              class='btn btn-outline-info'
+              target='_blanc'
+            >
+              {{name}}
+            </a>
+          </div>
         {{/each}}
       </div>
     {{/with}}

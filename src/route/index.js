@@ -7,8 +7,8 @@ const router = express.Router()
 
 var header = {
   name: {
-    firstname: 'Petro',
-    lastname: 'Ivanov',
+    firstname: 'Oleksandr',
+    lastname: 'Petruk',
   },
   position: 'Junior Fullstack JS Developer',
 
@@ -19,12 +19,12 @@ var header = {
 var footer = {
   social: {
     email: {
-      text: 'dmytro@mail.com',
-      href: 'mailto:dmytro@mail.com',
+      text: 'fbfanshurik9@gmail.com',
+      href: 'https://mail.google.com/mail/u/0/#inbox',
     },
     phone: {
-      text: '+380670000123',
-      href: 'tel:+380670000123',
+      text: '+380958907327',
+      href: 'tel:+380958907327',
     },
     linkedin: {
       href: 'https://www.linkedin.com/in/dmytro-test',
@@ -41,7 +41,12 @@ router.get('/', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index', {
+    layout: 'index',
+    header,
+    title: 'resume',
+    footer,
+  })
   //                  ↑↑ сюди вводимо JSON дані
 })
 
@@ -3147,6 +3152,24 @@ router.get('/shopcatalog', function (req, res) {
         },
       ],
     ],
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+// ================================================================
+
+// ================================================================
+
+// router.get Створює нам один ентпоїнт
+
+//           ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/resume', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('index', {
+    layout: 'index',
+    title: 'resume',
   })
   //                  ↑↑ сюди вводимо JSON дані
 })

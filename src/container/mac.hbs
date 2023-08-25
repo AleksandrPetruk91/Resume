@@ -1,16 +1,18 @@
-<div>
-  <main>
-    <section>
-      <div><h1>{{name}}</h1></div>
-      <p>{{category}}</p>
-      <p>{{description}}</p>
-      <p>Price - {{price}} usd.</p>
-    </section>
-    <hr />
-    <section>
-      {{#with features}}
-        <div><h2>Features</h2></div>
-        <br />
+<main class='m-4'>
+  <section>
+    <div class='text-center'><h1>{{name}}</h1></div>
+
+    <ul class='list-unstyled'>
+      <li>{{category}}</li>
+      <li>{{description}}</li>
+      <li>Price - {{price}} usd.</li>
+    </ul>
+  </section>
+  <hr />
+  <section class='row'>
+    {{#with features}}
+      <div class='text-center my-4'><h2>Features</h2></div>
+      <div class='col-4'>
         <ul>
           {{#with processor}}
             <div><h5>Processor</h5></div>
@@ -22,8 +24,8 @@
             <li>Cache - {{cache}}</li>
           {{/with}}
         </ul>
-        <br />
-        <ul>
+
+        <ul class='mt-5'>
           {{#with memory}}
             <div><h5>Memory</h5></div>
 
@@ -32,8 +34,8 @@
             <li>Speed - {{speed}}</li>
           {{/with}}
         </ul>
-        <br />
-        <ul>
+
+        <ul class='mt-4'>
           {{#with storage}}
             <div><h5>Storage</h5></div>
 
@@ -41,7 +43,9 @@
             <li>Size - {{size}}</li>
           {{/with}}
         </ul>
-        <br />
+      </div>
+
+      <div class='col-4'>
         <ul>
           {{#with display}}
             <div><h5>Display</h5></div>
@@ -54,8 +58,8 @@
             <li>Refresh rate - {{refresh_rate}}</li>
           {{/with}}
         </ul>
-        <br />
-        <ul>
+
+        <ul class='mt-4'>
           {{#with graphics}}
             <div><h5>Graphics</h5></div>
 
@@ -64,8 +68,8 @@
             <li>Memory - {{memory}}</li>
           {{/with}}
         </ul>
-        <br />
-        <ol>
+
+        <ol class='mt-3'>
           <div><h5>Ports</h5></div>
 
           {{#each ports}}
@@ -83,8 +87,10 @@
             <br />
           {{/each}}
         </ol>
-        <br />
-        <ul>
+      </div>
+
+      <div class='col-4'>
+        <ul class='mb-4'>
           {{#with battery}}
             <div><h5>Battery</h5></div>
 
@@ -94,11 +100,11 @@
           {{/with}}
         </ul>
         <br />
-        <ul>
+        <ul class='mt-5 mb-4'>
           <div><h5>Weight</h5> - {{weight}}</div>
         </ul>
         <br />
-        <ul>
+        <ul class='mt-3'>
           {{#with dimensions}}
             <div><h5>Dimensions</h5></div>
 
@@ -108,13 +114,16 @@
           {{/with}}
         </ul>
         <br />
+        <br />
+        <br />
+        <br />
         <ul>
           <div><h5>Operating system</h5>
             -
             {{operating_system}}</div>
         </ul>
-        <br />
-        <ol>
+
+        <ol class='mt-3'>
           <div><h5>Accessories</h5></div>
           {{#each accessories}}
             <li>{{name}}</li>
@@ -122,7 +131,9 @@
             <br />
           {{/each}}
         </ol>
-      {{/with}}
-    </section>
-  </main>
-</div>
+      </div>
+
+    {{/with}}
+  </section>
+  <hr />
+</main>
