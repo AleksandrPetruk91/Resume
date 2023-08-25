@@ -1,19 +1,20 @@
-<div>
-  <main>
-    {{#with program}}
-      {{#with excursion}}
-        <section>
-          <div><h1>{{name}}</h1></div>
+<main class='m-4'>
+  {{#with program}}
+    {{#with excursion}}
+      <section>
+        <div class='text-center'><h1>{{name}}</h1></div>
 
-          <p><strong>{{location.city}},
-              {{location.country}}</strong></p>
-          <p>Tour date: <time>{{date}}</time></p>
-        </section>
-        <hr />
-        <section>
-          {{#each program}}
+        <p><h3>{{location.city}},
+            {{location.country}}</h3></p>
+        <p>Tour date: <time>{{date}}</time></p>
+      </section>
+      <hr />
+      <section class='row'>
+
+        {{#each program}}
+          <div class='col-6'>
             <ul>
-              <div> <h2>{{name}}</h2> </div>
+              <div> <h3>{{name}}</h3> </div>
               <li>{{type}} </li>
               <li> Duration: {{duration}} hours.</li>
               <br />
@@ -22,7 +23,7 @@
               {{#with details}}
                 <section>
                   {{#with museum}}
-                    <div><h3>{{name}}</h3></div>
+                    <div><h4>{{name}}</h4></div>
                     <br />
                     {{#with location}}
                       <div>Location:
@@ -76,9 +77,10 @@
                 </section>
               {{/with}}
             </ul>
-          {{/each}}
-        </section>
-      {{/with}}
+          </div>
+        {{/each}}
+
+      </section>
     {{/with}}
-  </main>
-</div>
+  {{/with}}
+</main>

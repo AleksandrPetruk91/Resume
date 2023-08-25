@@ -1,163 +1,168 @@
-<div>
-  <main>
-    <section>
-      <div><h1>{{make}} {{model}}</h1></div>
-      <p>Made in <time>{{year}}</time></p>
-      <p>Color - {{color}}</p>
-    </section>
-    <hr />
+<main class='m-4'>
+  <section>
+    <div class='text-center'><h1>{{make}}
+        {{model}}</h1></div>
+    <p>Made in
+      <time>{{year}}</time>
+      <br />Color -
+      {{color}}</p>
 
-    <section>
-      {{#with features}}
-        <div><h2>Features</h2></div>
-        <ul>
-          <section>
-            {{#with interior}}
-              <div><h3>Interior</h3></div>
-              <br />
+  </section>
+  <hr />
 
-              <ul>
-                <section>
-                  {{#with seats}}
-                    <div><h5>Seats</h5></div>
-
-                    <li>Material - {{material}};</li>
-                    <li>Color - {{color}};</li>
-                    {{#if heated}}<li>Heated - available;</li>{{/if}}
-                    {{#if ventilated}}
-                      <li>Ventilated - available.</li>
-                    {{/if}}
-                  {{/with}}
-                </section>
-                <br />
-                <section>
-                  <div><h5>Dashboard</h5></div>
-
-                  {{#with dashboard}}
-                    <li>Material - {{material}};</li>
-                    <li>Color - {{color}};</li>
-                    <br />
-                    <ul>
-                      <div><b>Display :</b></div>
-
-                      {{#with display}}
-                        <li>{{type}}</li>
-                        <li>{{size}}</li>
-                        <li>{{resolution}}</li>
-                        {{#if touchscreen}}
-                          <li>Touchscreen - available.</li>
-                        {{/if}}
-                      {{/with}}
-                    </ul>
-                  {{/with}}
-                </section>
-                <br />
-                <section>
-                  <div><h5>Audio</h5></div>
-
-                  {{#with audio}}
-                    <li>System - {{system}};</li>
-                    <li>Speakers - {{speakers}};</li>
-                    {{#if subwoofer}}
-                      <li>Subwoofer - available.</li>
-                    {{/if}}
-                    {{#if bluetooth}}
-                      <li>Bluetooth - available.</li>
-                    {{/if}}
-                    {{#if USB}}
-                      <li>USB - available.</li>
-                    {{/if}}
-                  {{/with}}
-                </section>
-              </ul>
-            {{/with}}
-          </section>
-          <br />
-          <section>
-            <div><h3>Exterior</h3></div>
+  <section>
+    {{#with features}}
+      <div class='text-center my-5'><h2>Features</h2></div>
+      <div class='row'>
+        <section class='col-4'>
+          {{#with interior}}
+            <div><h3>Interior</h3></div>
             <br />
-            {{#with exterior}}
-              <ul>
-                <div><h5>Wheels</h5></div>
 
-                {{#with wheels}}
-                  <li>Size - {{size}}</li>
-                  <li>Type - {{type}}</li>
-                  <li>Color - {{color}}</li>
-                {{/with}}
-                <br />
-                <div><h5>Headlights</h5></div>
+            <ul>
+              <section>
+                {{#with seats}}
+                  <div><h5>Seats</h5></div>
 
-                {{#with headlights}}
-                  <li>Type - {{type}}</li>
-                  <li>Brightness - {{brightness}}</li>
-                  {{#if automatic}}
-                    <li>Automatic - available.</li>
+                  <li>Material - {{material}};</li>
+                  <li>Color - {{color}};</li>
+                  {{#if heated}}<li>Heated - available;</li>{{/if}}
+                  {{#if ventilated}}
+                    <li>Ventilated - available.</li>
                   {{/if}}
                 {{/with}}
-                <br />
-                <div><h5>Sunroof</h5></div>
+              </section>
+              <br />
+              <section>
+                <div><h5>Dashboard</h5></div>
 
-                {{#with sunroof}}
-                  <li>Type - {{type}}</li>
-                  <li>Size - {{size}}</li>
-                  {{#if automatic}}
-                    <li>Automatic - available.</li>
+                {{#with dashboard}}
+                  <li>Material - {{material}};</li>
+                  <li>Color - {{color}};</li>
+                  <br />
+                  <ul>
+                    <div><b>Display :</b></div>
+
+                    {{#with display}}
+                      <li>{{type}}</li>
+                      <li>{{size}}</li>
+                      <li>{{resolution}}</li>
+                      {{#if touchscreen}}
+                        <li>Touchscreen - available.</li>
+                      {{/if}}
+                    {{/with}}
+                  </ul>
+                {{/with}}
+              </section>
+              <br />
+              <section>
+                <div><h5>Audio</h5></div>
+
+                {{#with audio}}
+                  <li>System - {{system}};</li>
+                  <li>Speakers - {{speakers}};</li>
+                  {{#if subwoofer}}
+                    <li>Subwoofer - available.</li>
+                  {{/if}}
+                  {{#if bluetooth}}
+                    <li>Bluetooth - available.</li>
+                  {{/if}}
+                  {{#if USB}}
+                    <li>USB - available.</li>
                   {{/if}}
                 {{/with}}
-              </ul>
-            {{/with}}
-          </section>
-          <br />
-          <section>
-            <div><h3>Safety</h3></div>
-            {{#with safety}}
-              <ul>
-                <section>
-                  <div><h5>airbags</h5></div>
-                  {{#with airbags}}
-                    <li>front - {{front}}</li>
-                    <li>side - {{side}}</li>
-                    <li>knee- {{knee}}</li>
-                    <li>rear- {{rear}}</li>
-                  {{/with}}
-                </section>
-                <br />
-                <section>
-                  <div><h5>Assistance</h5></div>
+              </section>
+            </ul>
+          {{/with}}
+        </section>
 
-                  {{#with assistance}}
-                    {{#if blind_spot_monitoring}}
-                      <li>Blind spot monitoring - available.</li>
-                    {{/if}}
-                    {{#if rear_cross_traffic_alert}}
-                      <li>Rear cross traffic alert -
-                        available.</li>
-                    {{/if}}
-                    {{#if lane_departure_warning}}
-                      <li>Lane departure warning -
-                        available.</li>
-                    {{/if}}
-                    {{#if adaptive_cruise_control}}
-                      <li>Adaptive cruise control -
-                        available.</li>
-                    {{/if}}
-                    {{#if collision_warning}}
-                      <li>Collision warning - available.</li>
-                    {{/if}}
-                  {{/with}}
-                </section>
-                <br />
-              </ul>
-            {{/with}}
-          </section>
+        <section class='col-4'>
+          <div><h3>Exterior</h3></div>
           <br />
-        </ul>
-      {{/with}}
-    </section>
+          {{#with exterior}}
+            <ul>
+              <div><h5>Wheels</h5></div>
 
-    <section>
+              {{#with wheels}}
+                <li>Size - {{size}}</li>
+                <li>Type - {{type}}</li>
+                <li>Color - {{color}}</li>
+              {{/with}}
+              <br />
+              <div><h5>Headlights</h5></div>
+
+              {{#with headlights}}
+                <li>Type - {{type}}</li>
+                <li>Brightness - {{brightness}}</li>
+                {{#if automatic}}
+                  <li>Automatic - available.</li>
+                {{/if}}
+              {{/with}}
+              <br />
+              <div><h5>Sunroof</h5></div>
+
+              {{#with sunroof}}
+                <li>Type - {{type}}</li>
+                <li>Size - {{size}}</li>
+                {{#if automatic}}
+                  <li>Automatic - available.</li>
+                {{/if}}
+              {{/with}}
+            </ul>
+          {{/with}}
+        </section>
+
+        <section class='col-4'>
+          <div><h3>Safety</h3></div>
+          <br />
+          {{#with safety}}
+            <ul>
+              <section>
+                <div><h5>Airbags</h5></div>
+                {{#with airbags}}
+                  <li>front - {{front}}</li>
+                  <li>side - {{side}}</li>
+                  <li>knee- {{knee}}</li>
+                  <li>rear- {{rear}}</li>
+                {{/with}}
+              </section>
+              <br />
+              <section>
+                <div><h5>Assistance</h5></div>
+
+                {{#with assistance}}
+                  {{#if blind_spot_monitoring}}
+                    <li>Blind spot monitoring - available.</li>
+                  {{/if}}
+                  {{#if rear_cross_traffic_alert}}
+                    <li>Rear cross traffic alert -
+                      available.</li>
+                  {{/if}}
+                  {{#if lane_departure_warning}}
+                    <li>Lane departure warning - available.</li>
+                  {{/if}}
+                  {{#if adaptive_cruise_control}}
+                    <li>Adaptive cruise control - available.</li>
+                  {{/if}}
+                  {{#if collision_warning}}
+                    <li>Collision warning - available.</li>
+                  {{/if}}
+                {{/with}}
+              </section>
+              <br />
+            </ul>
+          {{/with}}
+        </section>
+
+      </div>
+    {{/with}}
+    <hr />
+  </section>
+
+  <section class='row mt-5'>
+    <div class='col-4'>
       <div><h2>Engine</h2></div>
+      <br />
       {{#with engine}}
         <ul>
           <li>Type - {{type}}</li>
@@ -174,9 +179,9 @@
           </ul>
         </ul>
       {{/with}}
-    </section>
-    <br />
-    <section>
+    </div>
+
+    <div class='col-4'>
       <div><h2>Fuel economy</h2></div>
       {{#with fuel_economy}}
         <ul>
@@ -185,9 +190,9 @@
           <li>Combined - {{combined}}</li>
         </ul>
       {{/with}}
-    </section>
-    <dr />
-    <section>
+    </div>
+
+    <div class='col-4'>
       <div><h2>Price</h2></div>
       {{#with price}}
         <ul>
@@ -205,6 +210,6 @@
           {{/with}}
         </ul>
       {{/with}}
-    </section>
-  </main>
-</div>
+    </div>
+  </section>
+</main>

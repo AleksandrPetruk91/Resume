@@ -1,78 +1,87 @@
-<div>
-  <header>
-    <div><h1>{{name}}</h1></div>
+<main class='m-4'>
+  <section>
+    <div class='text-center'><h1>{{name}}</h1></div>
     <p>{{description}}</p>
     <p>Founded in
       <time>{{history.year}}</time>
       by
       {{history.founder}}</p>
-  </header>
-  <main>
-    <section>
-      <div><h2>Types :</h2></div>
-      <ol>
-        {{#each types}}
-          <li>{{this}}</li>
-        {{/each}}
-      </ol>
-    </section>
     <hr />
-    <section>
-      <div><h2>Syntax :</h2></div>
-      <ol>
-        {{#with syntax}}
-          <li><b>Variables :</b>
-            {{#each variables}}{{this}},{{/each}}</li>
-          <li><b>Functions :</b>
-            {{#each functions}}{{this}},{{/each}}</li>
-          <li><b>Conditionals :</b>
-            {{#each conditionals}}{{this}},{{/each}}</li>
-          <li><b>Loops :</b>
-            {{#each loops}}{{this}},{{/each}}</li>
-          <li><b>Classes :</b>
-            {{#each classes}}{{this}},{{/each}}</li>
-        {{/with}}
-      </ol>
-    </section>
-    <hr />
-    <section>
-      <div><h2>Features :</h2></div>
-      <ol>
-        {{#each features}}
-          <li>{{this}}</li>
-        {{/each}}
-      </ol>
-    </section>
-    <hr />
-    <section>
-      <div><h2>Libraries :</h2></div>
-      <ol>
-        {{#each libraries}}
-          <li>{{this}}</li>
-        {{/each}}
-      </ol>
-    </section>
-    <hr />
-    <section>
-      <div><h2>Tools :</h2></div>
-      <ol>
-        {{#each tools}}
-          <li>{{this}}</li>
-        {{/each}}
-      </ol>
-    </section>
-    <hr />
-    <section>
-      <div><h2>Community :</h2></div>
-      <ol>
-        {{#each community}}
-          <li>{{name}}. Type - {{type}}</li>
-        {{/each}}
-      </ol>
-    </section>
-    <hr />
-  </main>
-  <footer>
+  </section>
+  <div class='row'>
+    <div class='col-6'>
+      <section>
+        <div><h2>Types :</h2></div>
+        <ol>
+          {{#each types}}
+            <li>{{this}}</li>
+          {{/each}}
+        </ol>
+      </section>
+      <br />
 
-  </footer>
-</div>
+      <section class='mt-1'>
+        <div><h2>Syntax :</h2></div>
+        <ol>
+          {{#with syntax}}
+            <li><b>Variables :</b>
+              {{#each variables}}{{this}},{{/each}}</li>
+            <li><b>Functions :</b>
+              {{#each functions}}{{this}},{{/each}}</li>
+            <li><b>Conditionals :</b>
+              {{#each conditionals}}{{this}},{{/each}}</li>
+            <li><b>Loops :</b>
+              {{#each loops}}{{this}},{{/each}}</li>
+            <li><b>Classes :</b>
+              {{#each classes}}{{this}},{{/each}}</li>
+          {{/with}}
+        </ol>
+      </section>
+      <br />
+      <br />
+      <br />
+
+      <section>
+        <div><h2>Features :</h2></div>
+        <ol>
+          {{#each features}}
+            <li>{{this}}</li>
+          {{/each}}
+        </ol>
+      </section>
+    </div>
+
+    <div class='col-6'>
+
+      <section>
+        <div><h2>Libraries :</h2></div>
+        <ol>
+          {{#each libraries}}
+            <li>{{this}}</li>
+          {{/each}}
+        </ol>
+      </section>
+
+      <section class='mt-3'>
+        <div><h2>Tools :</h2></div>
+        <ol>
+          {{#each tools}}
+            <li>{{this}}</li>
+          {{/each}}
+        </ol>
+      </section>
+
+      <section>
+        <div><h2>Community :</h2></div>
+        <ol>
+          {{#each community}}
+            <li>{{name}}. Type - {{type}}</li>
+          {{/each}}
+        </ol>
+      </section>
+    </div>
+
+  </div>
+
+  <hr />
+</main>

@@ -1,0 +1,39 @@
+<footer class='row m-4'>
+  <hr />
+  <section>
+    <ol class='breadcrumb'>
+      {{#with footer}}
+        {{#with social}}
+          {{#with email}}
+            <li class='breadcrumb-item'>
+              <a
+                href='{{href}}'
+                target='_blanc'
+              >{{text}}</a>
+            </li>
+          {{/with}}
+          {{#with phone}}
+            <li class='breadcrumb-item'>
+              <a
+                href='{{href}}'
+                target='_blanc'
+              >{{text}}</a>
+            </li>
+          {{/with}}
+        {{/with}}
+      {{/with}}
+    </ol>
+  </section>
+
+  <div>
+    {{#with header}}
+      {{#with name}}
+        <em>Copyright by {{firstname}} {{lastname}}</em>
+      {{/with}}
+    {{/with}}
+  </div>
+
+  <div>
+    <em>{{header.address}}</em>
+  </div>
+</footer>
